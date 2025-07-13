@@ -1,5 +1,5 @@
 from address import Address
-from mail import Mailing
+from Mailing import Mailing
 
 from_address = Address('156958', 'Sakmara', 'Lesnaya', 15, 129)
 to_address = Address('954862', 'Orsk', 'Lenina', 154, 89)
