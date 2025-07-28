@@ -10,7 +10,7 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 driver.get("https://bonigarcia.dev/selenium-webdriver-java/loading-images.html")
 
 waiter = WebDriverWait(driver, 40)
-waiter.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "#landscape")))
+waiter.until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".lead"), "Done!"))
 
 image = driver.find_element(By.CSS_SELECTOR, "#award")
 
