@@ -1,4 +1,3 @@
-#from time import sleep
 import pytest
 from selenium import webdriver
 from selenium.webdriver.firefox.service import Service as FirefoxService
@@ -24,7 +23,6 @@ def test_shop(driver):
     driver.find_element(By.CSS_SELECTOR, '#password').send_keys('secret_sauce')
     driver.find_element(By.CSS_SELECTOR, '#login-button').click()
 
-    #sleep(2)
 
     driver.find_element(By.CSS_SELECTOR, '#add-to-cart-sauce-labs-backpack').click()
     driver.find_element(By.CSS_SELECTOR, '#add-to-cart-sauce-labs-bolt-t-shirt').click()
@@ -32,24 +30,17 @@ def test_shop(driver):
 
     driver.find_element(By.CSS_SELECTOR, '.shopping_cart_link').click()
 
-    #sleep(2)
 
     driver.find_element(By.CSS_SELECTOR, '#checkout').click()
-    #sleep(2)
 
     driver.find_element(By.CSS_SELECTOR, '#first-name').send_keys('Юлия')
     driver.find_element(By.CSS_SELECTOR, '#last-name').send_keys('Ерисова')
     driver.find_element(By.CSS_SELECTOR, '#postal-code').send_keys('443028')
 
-    #sleep(2)
     driver.find_element(By.CSS_SELECTOR, '#continue').click()
-    #sleep(2)
 
     total_text = driver.find_element(By.CSS_SELECTOR, '.summary_total_label').text
     total = total_text.replace('Total: ', '')
 
-    print(total)
-    #sleep(20)
-    #driver.quit()
 
     assert total == '$58.29'
