@@ -17,7 +17,7 @@ def driver():
 def test_calc(driver):
 
     driver.get("https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html")
-    waiter = WebDriverWait(driver, 60)
+    waiter = WebDriverWait(driver, 45)
     driver.find_element(By.CSS_SELECTOR, "#delay").clear()
     driver.find_element(By.CSS_SELECTOR, "#delay").send_keys("45")
 
