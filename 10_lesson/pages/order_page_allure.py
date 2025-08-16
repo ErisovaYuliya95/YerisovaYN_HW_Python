@@ -10,7 +10,7 @@ class OrderPage:
         """
         self._driver = driver
 
-    @allure.step("Ввод имени, фамилии, индекса пользователя")
+    @allure.step("Ввод имени, фамилии, индекса пользователя ")
     def information_of_buyer(self, first_name: str, last_name: str, code: str):
         """
         Функция вводит имя, фамилию и почтовый индекс пользователя

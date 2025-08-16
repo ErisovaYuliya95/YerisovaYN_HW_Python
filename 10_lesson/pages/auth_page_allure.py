@@ -10,7 +10,7 @@ class AuthPage:
         """
         self._driver = driver
 
-    @allure.step("Ввод логина и пароля")
+    @allure.step("Ввод логина и пароля ")
     def login(self, username: str, password: str):
         """
         Функция вводит логин и пароль пользователя для авторизации

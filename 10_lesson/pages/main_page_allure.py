@@ -10,7 +10,7 @@ class MainPage:
         """
         self._driver = driver
 
-    @allure.step("Выбор товаров в корзину")
+    @allure.step("Выбор товаров в корзину ")
     def selection_of_product(self):
         """
         Функция находит и кладет товары в корзину
